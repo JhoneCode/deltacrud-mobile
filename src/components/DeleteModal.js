@@ -45,7 +45,7 @@ export function DeleteModal(props) {
     }, 4000);
 
     axios.delete(
-      `http://10.0.0.105:3000/alumns/${props.id}`,
+      `https://deltacrud-backend-production.up.railway.app/alumns/${props.id}`,
       { signal: abortController.signal }
     )
     .then(() => {

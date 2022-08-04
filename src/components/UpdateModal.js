@@ -82,7 +82,7 @@ export function UpdateModal(props) {
   
     try{
       response = await axios({
-        url: `http://10.0.0.105:3000/alumns/${props.id}`, 
+        url: `https://deltacrud-backend-production.up.railway.app/${props.id}`, 
         headers: {
           'Authorization': '',
           'Content-Type': 'multipart/form-data'

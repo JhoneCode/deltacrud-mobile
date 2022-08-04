@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "DeltaCRUD",
+    "name": "Delta React",
     "slug": "client",
     "icon": "./src/assets/logo.png",
     "version": "1.0.0",

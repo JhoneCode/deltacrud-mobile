@@ -79,14 +79,14 @@ const styles = StyleSheet.create({
   },
   name: {
     fontFamily: 'Inter_600SemiBold',
-    fontSize: 18,
+    fontSize: 16,
     marginBottom: 10,
     color: '#d3d3d3',
   },
   address: {
     fontFamily: 'Inter_500Medium',
     color: '#797ef6',
-    fontSize: 14,
+    fontSize: 12,
     marginBottom: 20,
 
   },

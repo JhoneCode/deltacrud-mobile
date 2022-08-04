@@ -6,7 +6,6 @@ import { CantConnect } from './CantConnect';
 import { LoadingScreen } from './LoadingScreen';
 import { RefreshControl } from 'react-native'
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
-import { get } from 'react-native/Libraries/Utilities/PixelRatio';
 
 
 
@@ -16,7 +15,7 @@ export function AlumnList() {
   const [searchText, setSearchText] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [isConnected, setIsConnected] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
+  const [refreshing, setIsRefreshing] = useState(false);
 
   useEffect(() => {
       getData();
@@ -27,7 +26,7 @@ export function AlumnList() {
     const controller = new AbortController();
   
     axios.get(
-      'http://10.0.0.105:3000/alumns',
+      'https://deltacrud-backend-production.up.railway.app/alumns',
       { signal: controller.signal }
     ).then(({ data }) => {
       if(searchText === '') {
@@ -56,7 +55,9 @@ export function AlumnList() {
   };
 
   const onRefresh = () => {
+    setIsRefreshing(true);
     getData();
+    setIsRefreshing(false);
   };
 
     function renderItem({ item }) {
@@ -81,8 +82,7 @@ export function AlumnList() {
           />
         </TouchableOpacity>
       </View>
-      { isLoading | refreshing ? <LoadingScreen/> : null}
-      { isConnected && list.length > 0 ? <FlatList
+      { isLoading | refreshing ? <LoadingScreen/> : isConnected && list.length > 0 ? <FlatList
         data={list}
         keyExtractor= {item => item._id}
         renderItem={renderItem}
@@ -93,6 +93,7 @@ export function AlumnList() {
           onRefresh={onRefresh}
       />}
       /> : <CantConnect refreshing={refreshing} refresh={onRefresh}/>}
+      { }
     </View>
   )
 }

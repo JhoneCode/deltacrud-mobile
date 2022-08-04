@@ -37,6 +37,7 @@ export function Register() {
   const [nameBorder, setNameBorder] = useState('#dddddd');
   const [addressBorder, setAddressBorder] = useState('#dddddd');
   const [ isLoading, setIsLoading] = useState(false);
+  const [ creatingSuccess, setIsCreatingSuccess] = useState(false);
 
 
   const pickImageFromGalleryAsync = async () => {
@@ -68,8 +69,8 @@ export function Register() {
     });
   
     try{
-      response = await axios({
-        url: 'http://10.0.0.105:3000/alumns', 
+      axios({
+        url: 'https://deltacrud-backend-production.up.railway.app/alumns', 
         headers: {
           'Authorization': '',
           'Content-Type': 'multipart/form-data'
@@ -81,7 +82,14 @@ export function Register() {
     console.error(error);
   }
   finally {
-    setIsLoading(false);
+    setIsCreatingSuccess(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setName('');
+      setAddress('');
+      setImage(null);
+      setIsCreatingSuccess(true);
+    }, 2000);
     }
   }
   
@@ -94,8 +102,9 @@ export function Register() {
             keyboardAppearance='dark'
             style={[styles.input, {borderColor: nameBorder}]} 
             placeholderTextColor={`${nameBorder === '#cf3c3f' ? '#cf3c3f' : '#dddddd'}`} 
-            placeholder={`${nameBorder === '#cf3c3f' ? '*este campo é obrigatório' : 'Digite o endereço do aluno'}`} 
+            placeholder={`${nameBorder === '#cf3c3f' ? '*este campo é obrigatório' : 'Digite o nome do aluno'}`} 
             onChangeText={setName} 
+            value={name}
             onFocus={() =>  setNameBorder('#4c46c8')} 
             onBlur={() => {
               if (name == '') {
@@ -111,7 +120,8 @@ export function Register() {
             style={[styles.input, {borderColor: addressBorder}]} 
             placeholderTextColor={`${addressBorder === '#cf3c3f' ? '#cf3c3f' : '#dddddd'}`} 
             placeholder={`${addressBorder === '#cf3c3f' ? '*este campo é obrigatório' : 'Digite o endereço do aluno'}`} 
-            onChangeText={setAddress} 
+            onChangeText={setAddress}
+            value={address}
             onFocus={() =>  setAddressBorder('#4c46c8')} 
             onBlur={() => {
               if (address == '') {
