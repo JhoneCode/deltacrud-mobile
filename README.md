@@ -4,6 +4,7 @@
  <a href="#-roadmap">Roadmap</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-instruções">Instruções</a> • 
+ <a href="#-resultados">Resultados</a> •
  <a href="#autor">Autor</a>
 </p>
   <img src="https://img.shields.io/static/v1?label=APK%20size&message=64.9MB&color=b6b7f6&style=for-the-badge&logo=android"/>
@@ -53,9 +54,13 @@ Projeto finalizado ✅
 - Aws S3 
 - Mongo DB
 
+## 📽 Resultados
+
+
+
 ## 👨‍💻 Autor
 
-João Pedro de Castro Viera (JhoneCode) é um desenvolvedor full stack JavaScript com conhecimentos em diversas tecnologias para desenvolvimento de interfaces modernas e responsivas.
+João Pedro de Castro Viera (JhoneCode) é um desenvolvedor full stack JavaScript com conhecimentos em diversas tecnologias de desenvolvimento de interfaces modernas e responsivas para ambientes web e mobile.
 
 Contatos:
 
