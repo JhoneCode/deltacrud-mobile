@@ -19,7 +19,7 @@
 
 Alem dá própria biblioteca do React Native, para atender as features solicitadas, foram utilizados os pacotes React Navigation para a transição entre a tela principal e a tela de cadastro, bem como o Image Picker do RN para acesso à galeria do aparelho.
 
-O backend da aplicação foi elaborado do zero com uma única rota chamada alumns" onde uma API construida em node é consumida por uma interface Axios, alimentando o cliente da aplicação. As imagens enviadas para o backend são salvas pelo código no Amazon AWS S3 e a uri para o conteúdo, assim como os dados de nome e endereço do aluno são salvos num documento JSON em uma base MONGO DB.
+O <a target="_blank" href="https://github.com/JhoneCode/deltacrud-backend">backend</a> da aplicação foi elaborado do zero com uma única rota chamada alumns" onde uma API construida em node é consumida por uma interface Axios, alimentando o cliente da aplicação. As imagens enviadas para o backend são salvas pelo código no Amazon AWS S3 e a uri para o conteúdo, assim como os dados de nome e endereço do aluno são salvos num documento JSON em uma base MONGO DB.
 
 ## 📖 Instruções
 
