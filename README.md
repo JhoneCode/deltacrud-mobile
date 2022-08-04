@@ -53,6 +53,16 @@ Projeto finalizado ✅
 - Aws S3 
 - Mongo DB
 
+## 👨‍💻 Autor
+
+João Pedro de Castro Viera (JhoneCode) é um desenvolvedor full stack JavaScript com conhecimentos em diversas tecnologias para desenvolvimento de interfaces modernas e responsivas.
+
+Contatos:
+
+Email: joaopedro.castrovieira@gmail.com
+linkedin: https://www.linkedin.com/in/joao-pedro-de-castro-vieira/
+whatsapp: (31) 98981-0745
+
 
 
 
