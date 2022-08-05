@@ -1,11 +1,11 @@
 <div align="center"><image src="https://user-images.githubusercontent.com/86243538/182903587-6e0392e4-d94e-4303-a1e3-eb000631ac97.png"/></br>
 <p align="center">
- <a href="#Sobre">Sobre</a> •
+ <a href="#-Sobre">Sobre</a> •
  <a href="#-roadmap">Roadmap</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-instruções">Instruções</a> • 
  <a href="#-resultados">Resultados</a> •
- <a href="#autor">Autor</a>
+ <a href="#-autor">Autor</a>
 </p>
   <img src="https://img.shields.io/static/v1?label=APK%20size&message=64.9MB&color=b6b7f6&style=for-the-badge&logo=android"/>
   <img src="https://img.shields.io/static/v1?label=React%20Native%20&message=v0.68.2&color=085182&style=for-the-badge&logo=react"/>
@@ -55,6 +55,11 @@ Projeto finalizado ✅
 - Mongo DB
 
 ## 📽 Resultados
+
+![image](https://user-images.githubusercontent.com/86243538/182958421-ed061e65-7d86-4b43-abfc-202e2d32820f.png)⠀⠀⠀⠀⠀⠀⠀⠀
+![image](https://user-images.githubusercontent.com/86243538/182958464-700d98df-9c08-4f29-a1d7-f8a1c0d907e8.png)
+
+
 
 
 
