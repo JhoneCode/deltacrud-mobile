@@ -49,14 +49,15 @@ Projeto finalizado ✅
 - [x] Opção de exclusão do registro
 
 ## 🛠 Tecnologias
-- React Native 
-- Node.js  
-- Aws S3 
-- Mongo DB
+- React Native (lib)
+- Node.js (backend)
+- Aws S3 (image storage)
+- Mongo DB (database)
+- Railway (deploy e manutenção)
 
 ## 📽 Resultados
 
-⠀⠀⠀⠀⠀![image](https://user-images.githubusercontent.com/86243538/182958421-ed061e65-7d86-4b43-abfc-202e2d32820f.png)⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀![image](https://user-images.githubusercontent.com/86243538/182958421-ed061e65-7d86-4b43-abfc-202e2d32820f.png)⠀⠀⠀⠀⠀⠀⠀⠀
 ![image](https://user-images.githubusercontent.com/86243538/182958464-700d98df-9c08-4f29-a1d7-f8a1c0d907e8.png)
 
 
