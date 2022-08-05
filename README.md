@@ -33,7 +33,7 @@ Para rodar esta aplicação em ambiente de desenvolvimento e/ou fazer alteraçõ
 
 Para testar esta aplicação em ambiente de produção:
 
-- Acesse o link do google drive a seguir para fazer o download do APK: https://drive.google.com/file/d/1PkPhq7rZNEgY6cqvvtNHiVq88oVVEQLZ/view?usp=sharing
+- Acesse o link do google drive a seguir para fazer o download do APK: https://drive.google.com/file/d/14oa-vnOIwZtykQji1iZ016c5f8B_pz_7/view?usp=sharing
 - Após o download do Apk, arraste o arquivo para dentro do aparelho emulado, ou instale manualmente no  emulador ou em um aparelho físico
 
 ## 🗺 Roadmap
