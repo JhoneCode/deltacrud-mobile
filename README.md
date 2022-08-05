@@ -57,13 +57,13 @@ Projeto finalizado ✅
 
 ## 📽 Resultados
 
-⠀⠀⠀⠀⠀![image](https://user-images.githubusercontent.com/86243538/182958421-ed061e65-7d86-4b43-abfc-202e2d32820f.png)⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀![image](https://user-images.githubusercontent.com/86243538/182958421-ed061e65-7d86-4b43-abfc-202e2d32820f.png)⠀⠀⠀
 ![image](https://user-images.githubusercontent.com/86243538/182958464-700d98df-9c08-4f29-a1d7-f8a1c0d907e8.png)
 </br></br></br>
-⠀⠀⠀⠀⠀![image](https://user-images.githubusercontent.com/86243538/183129600-16a9c0f1-b9ad-4332-b866-42136f652861.png)⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀![image](https://user-images.githubusercontent.com/86243538/183129600-16a9c0f1-b9ad-4332-b866-42136f652861.png)⠀⠀⠀
 ![image](https://user-images.githubusercontent.com/86243538/183129620-8ca13c64-3f34-4c4a-b7a2-eb9ffa95d662.png)
 </br></br></br>
-⠀⠀⠀⠀⠀![image](https://user-images.githubusercontent.com/86243538/183129631-16f58496-dcee-4ecc-98ce-a0918d7cdef7.png)⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀![image](https://user-images.githubusercontent.com/86243538/183129631-16f58496-dcee-4ecc-98ce-a0918d7cdef7.png)⠀⠀⠀
 ![image](https://user-images.githubusercontent.com/86243538/183129633-b8057a8e-9152-4677-9c7a-ac6ee004df31.png)
 
 
