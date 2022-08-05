@@ -3,15 +3,9 @@ import { Modal, StyleSheet, Text, Pressable, View, ActivityIndicator } from 'rea
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
 import {
   useFonts,
-  Inter_100Thin,
-  Inter_200ExtraLight,
   Inter_300Light,
-  inter_500Medium,
   Inter_500Medium,
   Inter_600SemiBold,
-  Inter_700Bold,
-  Inter_800ExtraBold,
-  Inter_900Black,
 } from '@expo-google-fonts/inter';
 import axios from 'axios';
 
@@ -21,19 +15,11 @@ export function DeleteModal(props) {
   const [isLoading, setIsLoading] = useState(false);
   const [deleteCompleted, setDeleteCompleted] = useState(false);
 
-
   useFonts({
-    Inter_100Thin,
-    Inter_200ExtraLight,
     Inter_300Light,
-    inter_500Medium,
     Inter_500Medium,
     Inter_600SemiBold,
-    Inter_700Bold,
-    Inter_800ExtraBold,
-    Inter_900Black,
   });
-
 
   handleExclude = () => {
     setIsLoading(true);
@@ -159,7 +145,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
     color: '#797ef6',
-    fontFamily: 'inter_500Medium'
+    fontFamily: 'Inter_500Medium'
   },
   modalTextButtonConfirm: {
     fontSize: 16,

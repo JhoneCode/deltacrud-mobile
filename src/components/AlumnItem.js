@@ -3,18 +3,12 @@ import { StyleSheet, Text, View, Image, TouchableWithoutFeedback } from 'react-n
 import { UpdateModal } from './UpdateModal';
 import { DeleteModal } from './DeleteModal';
 import { DetailsModal } from './DetailsModal';
-
+import { LoadingScreen } from './LoadingScreen';
 import {
   useFonts,
-  Inter_100Thin,
-  Inter_200ExtraLight,
   Inter_300Light,
-  inter_500Medium,
   Inter_500Medium,
   Inter_600SemiBold,
-  Inter_700Bold,
-  Inter_800ExtraBold,
-  Inter_900Black,
 } from '@expo-google-fonts/inter';
 
 
@@ -24,18 +18,15 @@ import {
 export function AlumnItem({ name, address, url, createdAt, updatedAt, _id, refresh}) {
   const [showOptions, setShowOptions] = useState(false);
 
-  
-  useFonts({
-    Inter_100Thin,
-    Inter_200ExtraLight,
+  let [fontsLoaded] = useFonts({
     Inter_300Light,
-    inter_500Medium,
     Inter_500Medium,
     Inter_600SemiBold,
-    Inter_700Bold,
-    Inter_800ExtraBold,
-    Inter_900Black,
   });
+
+  if (!fontsLoaded) {
+    return <LoadingScreen />;
+  }
 
   return (
     
@@ -61,7 +52,7 @@ export function AlumnItem({ name, address, url, createdAt, updatedAt, _id, refre
 const styles = StyleSheet.create({
 
   container: {
-    width: 350,
+    width: 320,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -75,18 +66,19 @@ const styles = StyleSheet.create({
   content: {
     width: 200,
     marginRight: 4,
-    marginVertical: 10
+    marginVertical: 10,
+    alignItems: 'center',
   },
   name: {
     fontFamily: 'Inter_600SemiBold',
-    fontSize: 16,
+    fontSize: 18,
     marginBottom: 10,
     color: '#d3d3d3',
   },
   address: {
     fontFamily: 'Inter_500Medium',
     color: '#797ef6',
-    fontSize: 12,
+    fontSize: 14,
     marginBottom: 20,
 
   },

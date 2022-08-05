@@ -39,6 +39,7 @@ export function AlumnList() {
         )
       }
       setIsLoading(false)
+      setIsRefreshing(false);
     })
   .catch((error) => {
     console.log(error.response.data)
@@ -56,8 +57,6 @@ export function AlumnList() {
 
   const onRefresh = () => {
     setIsRefreshing(true);
-    getData();
-    setIsRefreshing(false);
   };
 
     function renderItem({ item }) {

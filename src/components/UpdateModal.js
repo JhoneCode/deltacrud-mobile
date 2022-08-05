@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
 import { TextInput, Modal, TouchableOpacity, StyleSheet, Text, Pressable, View, Image, ActivityIndicator } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
-import { launchImageLibrary } from 'react-native-image-picker';
+import * as ImagePicker from 'expo-image-picker';
 
 import axios from 'axios';
 import {
   useFonts,
-  Inter_100Thin,
-  Inter_200ExtraLight,
   Inter_300Light,
-  inter_500Medium,
   Inter_500Medium,
   Inter_600SemiBold,
-  Inter_700Bold,
-  Inter_800ExtraBold,
-  Inter_900Black,
 } from '@expo-google-fonts/inter';
 
 export function UpdateModal(props) {
@@ -29,30 +23,26 @@ export function UpdateModal(props) {
   const [isLoading, setIsLoading] = useState(false);
 
   useFonts({
-    Inter_100Thin,
-    Inter_200ExtraLight,
     Inter_300Light,
-    inter_500Medium,
     Inter_500Medium,
     Inter_600SemiBold,
-    Inter_700Bold,
-    Inter_800ExtraBold,
-    Inter_900Black,
   });
 
   const pickImageFromGalleryAsync = async () => {
 
-    const options = {
-      imageType: 'photo',
-    }
-  
-    const result = await launchImageLibrary(options);
-  
-    if(result.assets) {
-      setImage(result.assets[0]);
-    }
-  }
-  
+    // No permissions request is necessary for launching the image library
+let result = await ImagePicker.launchImageLibraryAsync({
+  mediaTypes: ImagePicker.MediaTypeOptions.All,
+  allowsEditing: true,
+  aspect: [4, 3],
+  quality: 1,
+});
+
+console.log(result);
+
+  setImage(result.uri);
+}
+
   const resetImageSelection = () => {
     setImage(null);
   }
@@ -82,7 +72,7 @@ export function UpdateModal(props) {
   
     try{
       response = await axios({
-        url: `https://deltacrud-backend-production.up.railway.app/${props.id}`, 
+        url: `https://deltacrud-backend-production.up.railway.app/alumns/${props.id}`, 
         headers: {
           'Authorization': '',
           'Content-Type': 'multipart/form-data'
@@ -161,7 +151,7 @@ export function UpdateModal(props) {
               />
               <View>
                 {image ? 
-                  <Image style={styles.image} source={{uri: image.uri}}/> : 
+                  <Image style={styles.image} source={{uri: image}}/> : 
                   <Image style={styles.image} source={require('../assets/image-placeholder.png')} />
                 }
                 {image ? 
@@ -285,7 +275,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
     color: '#797ef6',
-    fontFamily: 'inter_500Medium'
+    fontFamily: 'Inter_500Medium'
   },
   modalTextButtonConfirm: {
     fontSize: 16,

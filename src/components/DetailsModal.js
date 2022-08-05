@@ -1,34 +1,21 @@
 import React, { useState } from 'react';
-import { Alert, Modal, StyleSheet, Text, Pressable, View, Image, ScrollView } from 'react-native';
+import {  Modal, StyleSheet, Text, Pressable, View, Image, ScrollView } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
-import { StatusBar } from 'expo-status-bar';
-
 import {
   useFonts,
-  Inter_100Thin,
-  Inter_200ExtraLight,
   Inter_300Light,
-  inter_500Medium,
   Inter_500Medium,
   Inter_600SemiBold,
-  Inter_700Bold,
-  Inter_800ExtraBold,
-  Inter_900Black,
 } from '@expo-google-fonts/inter';
 
 
 export function DetailsModal(props) {
   const [modalVisible, setModalVisible] = useState(false);
+
   useFonts({
-    Inter_100Thin,
-    Inter_200ExtraLight,
     Inter_300Light,
-    inter_500Medium,
     Inter_500Medium,
     Inter_600SemiBold,
-    Inter_700Bold,
-    Inter_800ExtraBold,
-    Inter_900Black,
   });
 
   return (

@@ -1,58 +1,44 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, Text, View, TouchableOpacity, Image, TextInput, SafeAreaView, ScrollView } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
-import { launchImageLibrary } from 'react-native-image-picker';
+import * as ImagePicker from 'expo-image-picker';
 import  axios  from 'axios';
 import {
   useFonts,
-  Inter_100Thin,
-  Inter_200ExtraLight,
-  Inter_300Light,
-  inter_500Medium,
-  Inter_500Medium,
-  Inter_600SemiBold,
   Inter_700Bold,
-  Inter_800ExtraBold,
-  Inter_900Black,
 } from '@expo-google-fonts/inter';
 
 
 
 export function Register() {
   useFonts({
-    Inter_100Thin,
-    Inter_200ExtraLight,
-    Inter_300Light,
-    inter_500Medium,
-    Inter_500Medium,
-    Inter_600SemiBold,
     Inter_700Bold,
-    Inter_800ExtraBold,
-    Inter_900Black,
   });
 
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState();
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [nameBorder, setNameBorder] = useState('#dddddd');
   const [addressBorder, setAddressBorder] = useState('#dddddd');
   const [ isLoading, setIsLoading] = useState(false);
-  const [ creatingSuccess, setIsCreatingSuccess] = useState(false);
 
-
+  
   const pickImageFromGalleryAsync = async () => {
 
-    const options = {
-      imageType: 'photo',
-    }
-  
-    const result = await launchImageLibrary(options);
-  
-    if(result.assets) {
-      setImage(result.assets[0]);
-    }
+        // No permissions request is necessary for launching the image library
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+    
+      setImage(result);
   }
-  
+
+
   const resetImageSelection = () => {
     setImage(null);
   }
@@ -63,7 +49,7 @@ export function Register() {
     data.append('name', name);
     data.append('address', address);
     data.append('file', {
-      name: image.fileName,
+      name: image.slice(image.lastIndexOf('.')+1),
       type: image.type,
       uri: image.uri
     });
@@ -82,13 +68,11 @@ export function Register() {
     console.error(error);
   }
   finally {
-    setIsCreatingSuccess(true);
     setTimeout(() => {
       setIsLoading(false);
       setName('');
       setAddress('');
       setImage(null);
-      setIsCreatingSuccess(true);
     }, 2000);
     }
   }
@@ -172,28 +156,28 @@ const styles = StyleSheet.create({
   text: {
     color: '#eeeeee',
     fontWeight: 'bold',
-    fontFamily: 'inter_700bold',
+    fontFamily: 'Inter_700Bold',
     letterSpacing: 0.5,
     fontSize: 20,
   },
   textPrimary: {
     color: '#eeeeee',
     fontWeight: 'bold',
-    fontFamily: 'inter_700bold',
+    fontFamily: 'Inter_700Bold',
     letterSpacing: 0.5,
     fontSize: 16,
   },
   textSecundary: {
     color: '#4c46c8',
     fontWeight: 'bold',
-    fontFamily: 'inter_700bold',
+    fontFamily: 'Inter_700Bold',
     letterSpacing: 0.5,
     fontSize: 16,
   },
   textFaded: {
     color: '#dddddd',
     fontWeight: 'bold',
-    fontFamily: 'inter_700bold',
+    fontFamily: 'Inter_700Bold',
     letterSpacing: 0.5,
     fontSize: 16,
   },

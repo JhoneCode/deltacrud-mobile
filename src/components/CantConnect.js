@@ -1,34 +1,26 @@
 import React from 'react';
 import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
-
+import { LoadingScreen } from './LoadingScreen';
 import {
   useFonts,
-  Inter_100Thin,
-  Inter_200ExtraLight,
   Inter_300Light,
-  inter_500Medium,
   Inter_500Medium,
   Inter_600SemiBold,
-  Inter_700Bold,
-  Inter_800ExtraBold,
-  Inter_900Black,
 } from '@expo-google-fonts/inter';
 
 
 export function CantConnect({ refresh, refreshing }) {
 
-  useFonts({
-    Inter_100Thin,
-    Inter_200ExtraLight,
+  let [fontsLoaded] = useFonts({
     Inter_300Light,
-    inter_500Medium,
     Inter_500Medium,
     Inter_600SemiBold,
-    Inter_700Bold,
-    Inter_800ExtraBold,
-    Inter_900Black,
   });
+
+  if (!fontsLoaded) {
+    return <LoadingScreen />;
+  }
 
   return (
     <>{!refreshing ?
