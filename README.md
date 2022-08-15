@@ -1,7 +1,8 @@
-<div align="center"><image src="https://user-images.githubusercontent.com/86243538/182903587-6e0392e4-d94e-4303-a1e3-eb000631ac97.png"/></br>
+<div align="center"><image src="https://user-images.githubusercontent.com/86243538/184651019-7fd80b57-f15a-4b8c-8874-235c1501b670.png"/></br>
 <p align="center">
  <a href="#-Sobre">Sobre</a> •
- <a href="#-roadmap">Roadmap</a> • 
+ <a href="#-roadmap">Roadmap</a> •
+
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-instruções">Instruções</a> • 
  <a href="#-resultados">Resultados</a> •
