@@ -1,8 +1,8 @@
-<div align="center"><image src="https://user-images.githubusercontent.com/86243538/184651019-7fd80b57-f15a-4b8c-8874-235c1501b670.png"/></br>
+<div align="center"><image height="250px" src="https://user-images.githubusercontent.com/86243538/185818351-441c75e5-c83e-4633-9e0e-ff218258f285.png" alt="banner do deltaCrud"</div>
+</br></br>
 <p align="center">
  <a href="#-Sobre">Sobre</a> •
  <a href="#-roadmap">Roadmap</a> •
-
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-instruções">Instruções</a> • 
  <a href="#-resultados">Resultados</a> •
